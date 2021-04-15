@@ -1,9 +1,9 @@
 import React from "react";
-import Card from "./public/components/click"
+import Card from "./components/Card"
 
 
 function App() {
   return <Card />
 }
 
-export default App
+export default App;
