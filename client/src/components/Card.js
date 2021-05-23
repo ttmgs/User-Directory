@@ -1,10 +1,12 @@
 import React from "react";
+import SearchBar from "./search/search";
+
 
 function Card() {
   return (
   <div>
     <h1 id="title">EMPLOYEE DIRECTORY</h1>
-  
+    <SearchBar></SearchBar>
     <table id="table" class="table table-dark table-striped">
       
       <thead>
