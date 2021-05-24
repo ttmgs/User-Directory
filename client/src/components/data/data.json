@@ -1,4 +1,8 @@
 [{"number": "1", "first-name": "Magdi", "last-name": "Tiea", "job-position": "Owner"},
   {"number": "2", "first-name": "Abdulaziz", "last-name": "Tiea", "job-position": "Head Manager"},
-  {"number": "3", "first-name": "Waleed", "last-name": "Tiea", "job-position": "Leader"}
+  {"number": "3", "first-name": "Waleed", "last-name": "Tiea", "job-position": "Leader"},
+  {"number": "3", "first-name": "Moes", "last-name": "Tiea", "job-position": "Leader"},
+  {"number": "3", "first-name": "Omar", "last-name": "Tiea", "job-position": "Leader"},
+  {"number": "3", "first-name": "Hamza", "last-name": "Tiea", "job-position": "Leader"}
+
 ]
