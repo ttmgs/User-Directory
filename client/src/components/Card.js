@@ -1,13 +1,44 @@
 import React from "react";
-import SearchBar from "./search/search";
+import { useState } from "react";
+import JSONDATA from "./data/data.json";
+
 
 
 function Card() {
+
+  // setting the state for the search bar
+  const [ input, setInput ] = useState("");
+
   return (
   <div>
     <h1 id="title">EMPLOYEE DIRECTORY</h1>
-    <SearchBar></SearchBar>
-    <table id="table" class="table table-dark table-striped">
+    <div class="input-group">
+    <input type="search" id="input" class="form-control rounded" placeholder="Search" aria-label="Search"
+    // event.target almost always represents a dom element. In this case the text entered in the search bar
+      aria-describedby="search-addon" onChange={(event) => {
+      setInput(event.target.value);
+      }} /> 
+
+{/* filter the elements in the original array first then map through the new array */}
+      {JSONDATA.filter((val)=> {
+        if (input === "") {
+          return val;
+        } else if (val["first-name"].toLowerCase().includes(input.toLowerCase())) {
+          return val;
+        }
+      }).map((val, key) => {
+        return  ( <thead>
+                 <tr>
+                 <th scope="row">#</th>
+                 <td> {val["first-name"]}  </td>
+                 <td> {val["last-name"]}  </td>
+                 <td> {val["job-position"]}  </td>
+                 </tr>
+                 </thead>
+      )})};
+
+    <button type="button" class="btn btn-outline-primary">search</button>
+  </div>    <table id="table" class="table table-dark table-striped">
       
       <thead>
         <tr>
@@ -20,24 +51,27 @@ function Card() {
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td><button id="button">Magdi</button></td>
+          <td id="Magdi">Magdi</td>
           <td>Tiea</td>
           <td id="">Owner</td>
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td id="name">Kafi</td>
+          <td id="name">Abdulaziz</td>
           <td>Musa</td>
           <td>Head Manager</td>
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td id="name">Abdulaziz</td>
-          <td>Musa</td>
+          <td id="name">Waleed</td>
+          <td>Tiea</td>
           <td>Leader</td>
         </tr>
+
+
+
         <tr>
-          <th scope="row">4</th>
+          {/* <th scope="row">4</th>
           <td id="name">Dominic</td>
           <td>Finnegan</td>
           <td>Employee</td>
@@ -120,8 +154,8 @@ function Card() {
           <td>Krueger</td>
           <td>Employee</td>
         </tr>
-        <tr>
-          <th scope="row">3</th>
+        <tr> */}
+          {/* <th scope="row">3</th>
           <td>Samira</td>
           <td>Buxton</td>
           <td>Employee</td>
@@ -148,7 +182,7 @@ function Card() {
           <th scope="row">3</th>
           <td>Rojin</td>
           <td>Camacho</td>
-          <td>Employee</td>
+          <td>Employee</td> */}
         </tr>
       </tbody>
     </table>
