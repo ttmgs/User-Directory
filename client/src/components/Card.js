@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import JSONDATA from "./data/data.json";
-
+import Wrapper from "./wrapper/wrapper";
 
 
 function Card() {
@@ -31,8 +31,7 @@ function Card() {
               <div>
 
 
-
-
+<Wrapper>
 
 <table id="table" class="table table-dark table-striped">
       
@@ -44,35 +43,45 @@ function Card() {
     <th scope="col">Job Position</th>
   </tr>
 </thead>
+
 <tbody>
 <tr>
-<th scope="row">#</th>
+<th scope="row">{val["number"]}</th>
 <td> {val["first-name"]}  </td>
 <td> {val["last-name"]}  </td>
 <td> {val["job-position"]}  </td>
   </tr>
-  <tr>
-    <th scope="row">1</th>
-    <td id="Magdi">Magdi</td>
-    <td>Tiea</td>
-    <td id="">Owner</td>
+
+
+
+
+
+
+
+
+  {/* <tr>
+    <th scope="col">{val["number"]}</th>
+    <td>{val["first-name"]}</td>
+    <td> {val["last-name"]}</td>
+    <td> {val["job-position"]}</td>
   </tr>
   <tr>
-    <th scope="row">2</th>
-    <td id="name">Abdulaziz</td>
-    <td>Musa</td>
-    <td>Head Manager</td>
+    <th scope="col">{val["number"]}</th>
+    <td> {val["first-name"]}</td>
+    <td> {val["last-name"]}</td>
+    <td>{val["job-position"]}</td>
   </tr>
   <tr>
     <th scope="row">3</th>
-    <td id="name">Waleed</td>
-    <td>Tiea</td>
-    <td>Leader</td>
-  </tr>
+    <td>{val["first-name"]}</td>
+    <td> {val["last-name"]}</td>
+    <td>{val["job-position"]}</td>
+  </tr> */}
 
 
 </tbody>
 </table>
+</Wrapper>
 </div>
 
 
@@ -92,6 +101,42 @@ function Card() {
   )};
 
 export default Card;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 {/* <table id="table" class="table table-dark table-striped">
