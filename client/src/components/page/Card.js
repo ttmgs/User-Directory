@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import JSONDATA from "./data/data.json";
-import Wrapper from "./wrapper/wrapper";
+import JSONDATA from "../data/data.json";
+import Wrapper from "../wrapper/wrapper";
 
 
 function Card() {
@@ -48,6 +48,8 @@ function Card() {
     <th scope="col">Job Position</th>
   </tr>
 </thead>
+
+
 
 {/* grabs the value strings from the db */}
 {/* outputs each persons info into the table */}
