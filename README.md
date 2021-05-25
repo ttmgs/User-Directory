@@ -9,3 +9,6 @@ The name says it all. This react built user directory is a live search directory
 - Javascript
 - HTML
 - CSS
+
+## Delployed Link
+https://ttmgs.github.io/User-Directory/
